@@ -1,5 +1,4 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 
 # 🚀 Dual Reaction
 
@@ -23,7 +22,6 @@
 - ⚡ **Lightning Fast**: Powered by Vite 6 for near-instant HMR.
 - 🎨 **Modern UI**: Styled with Tailwind CSS for a sleek, responsive design.
 - 🎭 **Smooth Animations**: Integrated with `motion` for fluid user interactions.
-- 🤖 **AI Ready**: Pre-configured for Google's Generative AI integration.
 - 🚀 **Auto-Deployment**: GitHub Actions workflow included for seamless GitHub Pages hosting.
 
 ## 🛠️ Tech Stack
@@ -54,13 +52,7 @@
    npm install
    ```
 
-3. **Set up environment variables**:
-   Create a `.env.local` file in the root directory and add your API key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-4. **Start the development server**:
+3. **Start the development server**:
    ```bash
    npm run dev
    ```
@@ -71,7 +63,6 @@
 This project is configured to automatically deploy to **GitHub Pages** via GitHub Actions.
 
 - **Workflow**: Whenever a push is made to the `main` branch, the `.github/workflows/deploy.yml` action triggers.
-- **Secrets**: Ensure you have added `GEMINI_API_KEY` to your repository's **Secrets** if your build requires it.
 
 ## 📄 License
 
