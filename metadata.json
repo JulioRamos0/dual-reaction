@@ -1,0 +1,6 @@
+{
+  "name": "Duelo de Reacción",
+  "description": "Un juego de reacción para dos jugadores con pantalla dividida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
