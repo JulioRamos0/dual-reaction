@@ -30,11 +30,7 @@ export default function App() {
         const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
         return () => clearTimeout(timer);
       } else {
-        const delay = Math.random() * 2000 + 500;
-        const timer = setTimeout(() => {
-          setGameState('playing');
-        }, delay);
-        return () => clearTimeout(timer);
+        setGameState('playing');
       }
     }
   }, [gameState, countdown]);
@@ -68,14 +64,13 @@ export default function App() {
         id="side-a"
         className={`relative flex-1 flex items-center justify-center cursor-pointer transition-colors duration-200 border-b-8 md:border-b-0 md:border-r-8 border-zinc-950
           ${gameState === 'playing' ? 'bg-emerald-500' : 'bg-rose-600'} 
-          ${winner === 'B' ? 'opacity-20' : 'opacity-100'}
-          ${gameState === 'ready' && countdown === 0 ? 'bg-amber-500' : ''}`}
+          ${winner === 'B' ? 'opacity-20' : 'opacity-100'}`}
         onPointerDown={() => handlePress('A')}
       >
         <div className="rotate-180 md:rotate-0 flex flex-col items-center">
           <span className="text-zinc-900/30 text-2xl font-black uppercase tracking-[0.2em] mb-4">Jugador A</span>
           <h2 className="text-8xl font-display font-black text-white tracking-tighter uppercase leading-none">
-            {gameState === 'playing' ? '¡YA!' : (gameState === 'ready' && countdown === 0 ? 'PREPARA' : 'LADO A')}
+            {gameState === 'playing' ? '¡YA!' : 'LADO A'}
           </h2>
         </div>
       </div>
@@ -85,14 +80,13 @@ export default function App() {
         id="side-b"
         className={`relative flex-1 flex items-center justify-center cursor-pointer transition-colors duration-200
           ${gameState === 'playing' ? 'bg-emerald-500' : 'bg-blue-600'} 
-          ${winner === 'A' ? 'opacity-20' : 'opacity-100'}
-          ${gameState === 'ready' && countdown === 0 ? 'bg-amber-500' : ''}`}
+          ${winner === 'A' ? 'opacity-20' : 'opacity-100'}`}
         onPointerDown={() => handlePress('B')}
       >
         <div className="flex flex-col items-center md:rotate-0">
           <span className="text-zinc-900/30 text-2xl font-black uppercase tracking-[0.2em] mb-4">Jugador B</span>
           <h2 className="text-8xl font-display font-black text-white tracking-tighter uppercase leading-none">
-            {gameState === 'playing' ? '¡YA!' : (gameState === 'ready' && countdown === 0 ? 'PREPARA' : 'LADO B')}
+            {gameState === 'playing' ? '¡YA!' : 'LADO B'}
           </h2>
         </div>
       </div>
