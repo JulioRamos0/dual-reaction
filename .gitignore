@@ -42,8 +42,6 @@ __snapshots__/
 .env.test.local
 .env.production.local
 
-# GitHub
-.github/
 
 # Optional: if you use a specific .env.example
 !.env.example
